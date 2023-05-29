@@ -1,0 +1,54 @@
+name: CVPR_COMP
+testset_as_validset: true
+valid_per_epoch:     1
+print_per_iter:      100
+save_per_epoch:      1
+manual_seed:         3407
+profile:             DNF_profile
+
+data:
+  type: SonyDictSet
+  camera: Sony
+  data_path: ./dataset
+  load_npy: true
+  num_workers: 4
+  pin_memory: true
+  process:
+    max_clip: 1.0
+    min_clip: 0.0
+  test:
+    batch_size: 1
+    image_list_file: Sony_new_test_list.txt
+    max_samples: null
+    patch_size: null
+    only_00: true
+  train:
+    batch_size: 1
+    image_list_file: Sony_train_list.txt
+    max_samples: null
+    patch_size: 1024
+  valid:
+    batch_size: 2
+    image_list_file: Sony_val_list.txt
+    max_samples: null
+    patch_size: 1024
+
+train:
+  forward_type: ss_train_forward
+  clip_grad: ~
+  optimizer: 
+    type: adamw
+    eps: 1.0e-8
+    betas: [0.9, 0.999]
+    momentum: 0.9
+  warmup_lr: 0
+  start_epoch: 0
+  warmup_epochs: 0
+  weight_decay: 0
+
+test:
+  forward_type: ss_test_forward
+  which_gt: rgb
+  which_stage: rgb
+  round: false
+  save_image: false

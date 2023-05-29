@@ -1,0 +1,8 @@
+base:
+  - base.yaml
+
+tag: baseline
+
+model:
+  type: DNF
+  feedback_fuse: GFM

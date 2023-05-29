@@ -1,0 +1,19 @@
+base:
+  - base.yaml
+
+loss:
+  classes:
+  - L1Loss
+  types:
+  - L1
+  which_gt:
+  - rgb
+  which_stage:
+  - rgb
+  weights:
+  - 1.0
+
+tag: singlestage
+
+model:
+  type: SingleStageNet

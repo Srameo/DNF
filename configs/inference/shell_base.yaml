@@ -1,0 +1,4 @@
+base:
+  - ../demo/shell_base.yaml
+
+tag: image_demo

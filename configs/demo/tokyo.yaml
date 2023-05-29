@@ -1,0 +1,18 @@
+base:
+  - base.yaml
+
+tag: tokyo
+
+data:
+  type: SingleBayerDictSet
+  camera: Sony
+  data_path: dataset/Tokyo_again4.2_dgain40_wb(1.0,1.7,1.68)/short_pack
+  load_npy: true
+  num_workers: 10
+  pin_memory: true
+  process:
+    max_clip: 1.0
+    min_clip: null
+  test:
+    batch_size: 2
+    ratio: 50

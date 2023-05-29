@@ -1,0 +1,13 @@
+name: CVPR_DEMO
+
+model:
+  type: DNF
+  f_number: 32
+  block_size: 2
+  denoising_block: CID
+  color_correction_block: MCC
+  feedback_fuse: GFM
+
+inference:
+  forward_type: inference_DNF
+  which_stage: rgb

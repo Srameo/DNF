@@ -1,0 +1,18 @@
+base:
+  - base.yaml
+
+tag: campus
+
+data:
+  type: SingleBayerDictSet
+  camera: Sony
+  data_path: dataset/Campus0_again4.2_dgain40_wb(1.0,1.7,2.8)/short_pack
+  load_npy: true
+  num_workers: 10
+  pin_memory: true
+  process:
+    max_clip: 1.0
+    min_clip: null
+  test:
+    batch_size: 2
+    ratio: 50

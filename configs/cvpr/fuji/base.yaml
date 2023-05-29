@@ -1,0 +1,83 @@
+name: CVPR_FUJI
+testset_as_validset: true
+valid_per_epoch:     1
+print_per_iter:      100
+save_per_epoch:      1
+manual_seed:         1234
+profile:             DNF_profile
+
+loss:
+  classes:
+  - L1Loss
+  - L1Loss
+  types:
+  - L1
+  - L1
+  which_gt:
+  - raw
+  - rgb
+  which_stage:
+  - raw
+  - rgb
+  weights:
+  - 1.0
+  - 1.0
+
+data:
+  type: FujiDictSet
+  camera: Fuji
+  data_path: ./dataset/sid
+  load_npy: true
+  num_workers: 10
+  pin_memory: true
+  process:
+    max_clip: 1.0
+    min_clip: null
+  test:
+    batch_size: 1
+    image_list_file: Fuji_test_list.txt
+    max_samples: null
+    patch_size: null
+    only_00: true
+  train:
+    batch_size: 1
+    image_list_file: Fuji_train_list.txt
+    max_samples: null
+    patch_size: 1536
+  valid:
+    batch_size: 2
+    image_list_file: Fuji_val_list.txt
+    max_samples: null
+    patch_size: 1536
+
+model:
+  f_number: 32
+  block_size: 3
+  denoising_block: CID
+  color_correction_block: MCC
+
+train:
+  forward_type: train_forward_DNF
+  base_lr: 0.0002
+  clip_grad: 0.1
+  early_stop: 500
+  epochs: 500
+  lr_scheduler:
+    type: cosine
+    t_in_epochs: true
+  optimizer: 
+    type: adamw
+    eps: 1.0e-8
+    betas: [0.9, 0.999]
+    momentum: 0.9
+  min_lr: 2.0e-5
+  start_epoch: 0
+  warmup_epochs: 0
+  weight_decay: 0
+
+test:
+  forward_type: test_forward_DNF
+  which_gt: rgb
+  which_stage: rgb
+  round: false
+  save_image: false

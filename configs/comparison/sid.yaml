@@ -1,0 +1,36 @@
+base:
+  - single_stage_base.yaml
+
+valid_per_epoch: 10
+print_per_iter:  200
+save_per_epoch:  10
+
+tag: sid
+
+loss:
+  classes:
+  - L1Loss
+  types:
+  - L1
+  which_gt:
+  - rgb
+  which_stage:
+  - rgb
+  weights:
+  - 1.0
+
+model:
+  type: SIDUNet
+  block_size: 2
+  channels: 32
+
+train:
+  base_lr: 1.0e-4
+  early_stop: 4000
+  epochs: 4000
+  lr_scheduler:
+    type: step
+    decay_epochs: 2000
+    decay_rate: 0.1
+    t_in_epochs: true
+  min_lr: 1.0e-5
