@@ -131,6 +131,8 @@ Please refer to [demo.md](docs/demo.md) to learn how to download the provided da
 
 Please refer to [benchmark.md](docs/benchmark.md) to learn how to benchmark DNF, how to train a new model from scratch.
 
+<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/file/d/1nrtcZc39W4b_SJrCoMgfaO14LGem4s6O/view).
+
 
 ## Citation
 

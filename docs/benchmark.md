@@ -6,6 +6,11 @@
   - [Evaluation](#evaluation)
   - [Training](#training)
 
+<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/file/d/1nrtcZc39W4b_SJrCoMgfaO14LGem4s6O/view).
+
+
+If you want to reproduce the metrics mentioned in the paper, please download the aforementioned txt file and place it in the `dataset/sid/` directory.
+
 ## Data Preparation
 
 <table>
@@ -88,6 +93,7 @@ After all the preprocess, the final data folder should be orgnized like:
 │   ├── Fuji_test_list.txt
 │   ├── Fuji_train_list.txt
 │   ├── Fuji_val_list.txt
+│   ├── Sony_new_test_list.txt
 │   ├── Sony_test_list.txt
 │   ├── Sony_train_list.txt
 │   └── Sony_val_list.txt
