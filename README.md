@@ -10,7 +10,7 @@ This repository contains the official implementation of the following paper:
 > In CVPR 2023
 
 \[[Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Jin_DNF_Decouple_and_Feedback_Network_for_Seeing_in_the_Dark_CVPR_2023_paper.pdf)\]
-\[Poster (TBD)\]
+\[[Google Drive](https://drive.google.com/drive/folders/1auXCb-k6jPqwoGPGrb0QcA4CNisD99jF?usp=drive_link)\]
 \[Homepage (TBD)\]
 \[Video (TBD)\]
 
@@ -131,7 +131,7 @@ Please refer to [demo.md](docs/demo.md) to learn how to download the provided da
 
 Please refer to [benchmark.md](docs/benchmark.md) to learn how to benchmark DNF, how to train a new model from scratch.
 
-<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/file/d/1nrtcZc39W4b_SJrCoMgfaO14LGem4s6O/view).
+<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/drive/folders/1DIuBcbq0wjbzmmSp0XSp7vrnW-jiKLFD?usp=drive_link) (`Sony_new_test_list.txt`).
 
 
 ## Citation

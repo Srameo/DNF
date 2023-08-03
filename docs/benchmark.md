@@ -6,12 +6,14 @@
   - [Evaluation](#evaluation)
   - [Training](#training)
 
-<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/file/d/1nrtcZc39W4b_SJrCoMgfaO14LGem4s6O/view).
+<b style='color:red'>Attention!</b> Due to the presence of three misaligned images in the SID Sony dataset (with scene IDs 10034, 10045, and 10172), our testing results in the article are based on excluding these images from the dataset. The txt file used for testing can be found and downloaded from the [Google Drive](https://drive.google.com/drive/folders/1DIuBcbq0wjbzmmSp0XSp7vrnW-jiKLFD?usp=drive_link) (`Sony_new_test_list.txt`).
 
 
 If you want to reproduce the metrics mentioned in the paper, please download the aforementioned txt file and place it in the `dataset/sid/` directory.
 
 ## Data Preparation
+
+> All the `txt files` for training and testing can be found in [Google Drive](https://drive.google.com/drive/folders/1DIuBcbq0wjbzmmSp0XSp7vrnW-jiKLFD?usp=drive_link).
 
 <table>
 <thead>
